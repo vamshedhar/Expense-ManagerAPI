@@ -1,2 +1,4 @@
 env
 models.txt
+*.pyc
+**/*.pyc

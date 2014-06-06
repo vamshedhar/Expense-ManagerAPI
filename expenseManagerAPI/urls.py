@@ -11,6 +11,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 )
 
-urlpatterns += patterns('',
-    url(r'^users/', include('users.urls')),
-)
+# urlpatterns += patterns('',
+#     url(r'^users/', include('users.urls')),
+# )
