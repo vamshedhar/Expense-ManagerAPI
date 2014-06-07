@@ -10,6 +10,8 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^auth-token/', 'rest_framework_jwt.views.obtain_jwt_token'),
+    url(r'^api-auth/', include('rest_framework.urls',
+                               namespace='rest_framework')),
 )
 
 urlpatterns += patterns('',
