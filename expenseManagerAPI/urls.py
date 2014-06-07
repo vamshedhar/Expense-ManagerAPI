@@ -16,4 +16,5 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('',
     url(r'^users/', include('users.urls')),
+    url(r'^trip/', include('trip.urls')),
 )

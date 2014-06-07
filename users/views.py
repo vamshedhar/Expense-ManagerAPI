@@ -19,7 +19,7 @@ class UsersList(APIView):
 		return Response(serializer.data)
 
 	def post(self, request, format=None):
-		serializer = UsersSerializer(data.request.DATA)
+		serializer = UsersSerializer(data=request.DATA)
 		if serializer.is_valid():
 			serializer.save()
 			return Response(serializer.data, status=HTTP_201_CREATED)
