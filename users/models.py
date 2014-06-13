@@ -17,25 +17,6 @@ class UserManager(BaseUserManager):
 	def create_superuser(self, email, password):
 		return self.save_user(email, password, True, True)
 
-	# def get_full_name(self):
- #    return self.full_name
-
-	# def get_short_name(self):
-	# 	return self.last_name
-
-	# @property
-	# def is_superuser(self):
-	# 	return self.is_superuser
-
-	# @property
-	# def is_staff(self):
-	# 	return self.is_staff
-
-	# def has_perm(self, perm, obj=None):
-	# 	return self.is_superuser
-
-	# def has_module_perms(self, app_label):
-	# 	return self.is_superuser
 
 class User(AbstractBaseUser, PermissionsMixin):
 	"""
@@ -46,7 +27,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 	last_name = models.CharField(max_length=30, blank=True)
 	is_staff = models.BooleanField(default=False)
 	is_active = models.BooleanField(default=True)
-	# is_superuser = models.BooleanField(default=False)
 	date_joined = models.DateTimeField(auto_now_add=True)
 
 	objects = UserManager()
